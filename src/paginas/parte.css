@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap');
+
+.parte-wrapper {
+  position: relative;
+  height: 400vh;
+  background-color: #e8e0d0;
+}
+
+.sticky-content {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #e8e0d0;
+}
+
+/* — topo editorial — */
+.parte-topo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 28px 30px 0;
+  z-index: 200;
+  pointer-events: none;
+}
+
+.parte-topo-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: 11px;
+  color: #cc1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+}
+
+.parte-numero {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: 28px;
+  color: #cc1a1a;
+  letter-spacing: -0.02em;
+}
+
+/* — título principal — */
+.parte-titulo {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(80px, 11vw, 160px);
+  color: #cc1a1a;
+  text-transform: uppercase;
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+/* — rodapé editorial — */
+.parte-rodape {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 30px;
+  z-index: 200;
+  pointer-events: none;
+  border-top: 1.5px solid #cc1a1a;
+  padding-top: 14px;
+}
+
+.parte-rodape-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  font-size: 11px;
+  color: #cc1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* — linha divisória central — */
+.parte-linha {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  right: 30px;
+  height: 1.5px;
+  background-color: #cc1a1a;
+  z-index: 200;
+  pointer-events: none;
+}
+
+/* — cards de imagem — */
+.moving-card {
+  position: fixed;
+  width: 18vw;
+  aspect-ratio: 2/3;
+  background: #d6cfc0;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 4px 4px 0px #cc1a1a;
+  border: 1.5px solid #cc1a1a;
+  transform: translate(-50%, -50%);
+}
+
+.moving-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .parte-titulo {
+    font-size: 52px;
+    left: 16px;
+  }
+  .moving-card {
+    width: 38vw;
+  }
+  .parte-topo,
+  .parte-rodape {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .parte-linha {
+    left: 16px;
+    right: 16px;
+  }
+}
