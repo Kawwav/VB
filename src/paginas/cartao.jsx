@@ -128,7 +128,8 @@ function MusicPlayer({ src, coverArt, autoPlay = false }) {
 }
 
 // ─── Modelo 3D da Rosa ────────────────────────────────────────────────────────
-const ROSA_PATH = '/rosa.gltf';
+// Injeta dinamicamente a subpasta do GitHub /VB/ caso esteja em produção
+const ROSA_PATH = `${import.meta.env.BASE_URL}rosa.gltf`;
 
 function RosaModel() {
   const { scene } = useGLTF(ROSA_PATH);
@@ -257,8 +258,9 @@ function Cartao() {
       <div className="cartao__player">
         <div className="cartao__player-eyebrow">Nossa música</div>
         <MusicPlayer
-          src="The Black Eyed Peas - Meet Me Halfway (Official Music Video) - BlackEyedPeasVEVO (youtube).mp3"
-          coverArt="/black.avif"
+          /* Se a música for um arquivo local na pasta public, adicione o prefixo também: */
+          src={`${import.meta.env.BASE_URL}The Black Eyed Peas - Meet Me Halfway (Official Music Video) - BlackEyedPeasVEVO (youtube).mp3`}
+          coverArt={`${import.meta.env.BASE_URL}black.avif`}
           autoPlay={false}
         />
       </div>
