@@ -3,8 +3,14 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import './parte.css';
 
 const IMAGES = [
-  "/imgagem1.jpg", "/imgagem2.jpg", "/imgagem3.jpg", "/imgagem4.jpg",
-  "/imgagem5.jpg", "/imgagem6.jpg", "/imgagem7.jpg", "/imgagem8.jpg"
+  `${import.meta.env.BASE_URL}imgagem1.jpg`,
+  `${import.meta.env.BASE_URL}imgagem2.jpg`,
+  `${import.meta.env.BASE_URL}imgagem3.jpg`,
+  `${import.meta.env.BASE_URL}imgagem4.jpg`,
+  `${import.meta.env.BASE_URL}imgagem5.jpg`,
+  `${import.meta.env.BASE_URL}imgagem6.jpg`,
+  `${import.meta.env.BASE_URL}imgagem7.jpg`,
+  `${import.meta.env.BASE_URL}imgagem8.jpg`
 ];
 
 function FloatingImage({ index, scrollYProgress, url }) {

@@ -168,7 +168,7 @@ function Inicio() {
           animate={entrar ? { y: 0, opacity: 1 } : { y: 120, opacity: 0 }}
           transition={{ ...transicao, delay: 0 }}
         >
-          <img src="/1.png" alt="foto gay" className="imagemgay1" />
+          <img src={`${import.meta.env.BASE_URL}1.png`} className="imagemgay1" />
         </motion.div>
       </div>
     </>

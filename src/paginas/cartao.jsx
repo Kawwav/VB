@@ -258,7 +258,6 @@ function Cartao() {
       <div className="cartao__player">
         <div className="cartao__player-eyebrow">Nossa música</div>
         <MusicPlayer
-          /* Se a música for um arquivo local na pasta public, adicione o prefixo também: */
           src={`${import.meta.env.BASE_URL}The Black Eyed Peas - Meet Me Halfway (Official Music Video) - BlackEyedPeasVEVO (youtube).mp3`}
           coverArt={`${import.meta.env.BASE_URL}black.avif`}
           autoPlay={false}
