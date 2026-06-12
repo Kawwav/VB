@@ -195,7 +195,7 @@ function Cartao() {
         </div>
         <div style={{ textAlign: 'center' }}>
           <div className="cartao__header-label">Dia dos Namorados</div>
-          <div className="cartao__header-label">2025</div>
+          <div className="cartao__header-label">2026</div>
         </div>
         <div className="cartao__header-num">(03)</div>
       </div>
