@@ -242,7 +242,7 @@ function Cartao() {
         <p className="cartao__descricao">
           Espero que tenha gostado do site que fiz com muito amor.
           <br /><br />
-          Apesar das brigas e das besteiras que cada um fez, eu ainda quero muito
+          Apesar das diferenças, eu ainda quero muito
           continuar, até porque você é a pessoa mais legal, dorminhoca, linda e
           magnífica que eu conheci e conheço.
           <br /><br />
